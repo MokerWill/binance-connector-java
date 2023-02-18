@@ -14,6 +14,10 @@ public class RequestHandler {
     private static final Logger logger = LoggerFactory.getLogger(RequestHandler.class);
     private final ProxyAuth proxy;
 
+    public RequestHandler(String apiKey) {
+        this(apiKey, null);
+    }
+
     public RequestHandler(String apiKey, ProxyAuth proxy) {
         this(apiKey, null, proxy);
     }
