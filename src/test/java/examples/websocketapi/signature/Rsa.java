@@ -1,11 +1,11 @@
 package examples.websocketapi.signature;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.enums.DefaultUrls;
 import com.binance.connector.client.impl.WebsocketApiClientImpl;
 import com.binance.connector.client.utils.RsaSignatureGenerator;
 
 import examples.PrivateConfig;
-import org.json.JSONObject;
 
 public final class Rsa {
     private Rsa() {

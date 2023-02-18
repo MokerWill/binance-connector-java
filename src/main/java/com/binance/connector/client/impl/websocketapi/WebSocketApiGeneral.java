@@ -1,8 +1,8 @@
 package com.binance.connector.client.impl.websocketapi;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.utils.ParameterChecker;
 import com.binance.connector.client.utils.websocketapi.WebSocketApiRequestHandler;
-import org.json.JSONObject;
 
 /**
  * <h2>General Requests</h2>

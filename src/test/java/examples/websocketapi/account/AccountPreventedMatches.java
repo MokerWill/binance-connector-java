@@ -1,7 +1,6 @@
 package examples.websocketapi.account;
 
-import org.json.JSONObject;
-
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.enums.DefaultUrls;
 import com.binance.connector.client.impl.WebsocketApiClientImpl;
 import com.binance.connector.client.utils.HmacSignatureGenerator;

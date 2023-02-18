@@ -1,12 +1,12 @@
 package com.binance.connector.client.utils;
 
-import com.binance.connector.client.exceptions.BinanceConnectorException;
-
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.UUID;
 
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
+import com.binance.connector.client.exceptions.BinanceConnectorException;
+
 
 public final class ParameterChecker {
 
@@ -49,7 +49,7 @@ public final class ParameterChecker {
         if (params != null) {
             int count = countStart;
             for (String parameter : parameters) {
-                if (params.has(parameter)) {
+                if (params.containsKey(parameter)) {
                     count++;
                 }
             }
@@ -65,7 +65,7 @@ public final class ParameterChecker {
         if (params != null) {
             int count = countStart;
             for (String parameter : parameters) {
-                if (!params.has(parameter)) {
+                if (!params.containsKey(parameter)) {
                     count++;
                 }
             }

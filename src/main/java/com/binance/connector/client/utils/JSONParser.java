@@ -1,11 +1,12 @@
 package com.binance.connector.client.utils;
 
+import com.alibaba.fastjson2.JSONException;
+import com.alibaba.fastjson2.JSONObject;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 public final class JSONParser {
 
@@ -14,7 +15,7 @@ public final class JSONParser {
 
     public static String getJSONStringValue(String json, String key) {
         try {
-            JSONObject obj = new JSONObject(json);
+            JSONObject obj = JSONObject.parseObject(json);
             return obj.getString(key);
         } catch (JSONException e) {
             throw new JSONException(String.format("[JSONParser] Failed to get \"%s\"  from JSON object", key));
@@ -23,8 +24,8 @@ public final class JSONParser {
 
     public static int getJSONIntValue(String json, String key) {
         try {
-            JSONObject obj = new JSONObject(json);
-            return obj.getInt(key);
+            JSONObject obj = JSONObject.parseObject(json);
+            return obj.getIntValue(key);
         } catch (JSONException e) {
             throw new JSONException(String.format("[JSONParser] Failed to get \"%s\" from JSON object", key));
         }
@@ -32,8 +33,7 @@ public final class JSONParser {
 
     public static String getJSONArray(ArrayList<?> symbols, String key) {
         try {
-            JSONArray arr = new JSONArray(symbols);
-            return arr.toString();
+            return JSONObject.toJSONString(symbols);
         } catch (JSONException e) {
             throw new JSONException(String.format("[JSONParser] Failed to convert \"%s\" to JSON array", key));
         }
@@ -63,17 +63,17 @@ public final class JSONParser {
         if (parameters == null) {
             parameters = new JSONObject();
         }
+        parameters.put(key, value);
 
-        return parameters.put(key, value);
+        return parameters;
     }
 
     public static Object pullValue(JSONObject parameters, String key) {
         if (parameters == null) {
             return null;
         }
-        Object value = parameters.opt(key);
-        parameters.remove(key);
-        return value;
+
+        return parameters.remove(key);
     }
 
 }

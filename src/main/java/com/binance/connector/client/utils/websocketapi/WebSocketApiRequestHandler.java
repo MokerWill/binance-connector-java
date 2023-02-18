@@ -1,5 +1,6 @@
 package com.binance.connector.client.utils.websocketapi;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.enums.RequestType;
 import com.binance.connector.client.exceptions.BinanceConnectorException;
 import com.binance.connector.client.utils.JSONParser;
@@ -8,7 +9,6 @@ import com.binance.connector.client.utils.SignatureGenerator;
 import com.binance.connector.client.utils.UrlBuilder;
 import com.binance.connector.client.utils.WebSocketConnection;
 
-import org.json.JSONObject;
 
 public class WebSocketApiRequestHandler {
     private final SignatureGenerator signatureGenerator;

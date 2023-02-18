@@ -1,7 +1,7 @@
 package unit;
 
+import com.alibaba.fastjson2.JSONException;
 import com.binance.connector.client.utils.JSONParser;
-import org.json.JSONException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

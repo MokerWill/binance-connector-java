@@ -1,7 +1,7 @@
 package examples.websocketapi.market;
 
-import org.json.JSONObject;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.impl.WebsocketApiClientImpl;
 
 public final class Ticker24H {

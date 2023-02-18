@@ -1,5 +1,6 @@
 package examples.websocketapi;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.impl.WebsocketApiClientImpl;
 import com.binance.connector.client.impl.WebsocketStreamClientImpl;
 import com.binance.connector.client.enums.DefaultUrls;
@@ -7,7 +8,7 @@ import com.binance.connector.client.utils.HmacSignatureGenerator;
 import com.binance.connector.client.utils.WebSocketCallback;
 
 import examples.PrivateConfig;
-import org.json.JSONObject;
+
 
 public final class WsStreamWithWsApiTrade {
     

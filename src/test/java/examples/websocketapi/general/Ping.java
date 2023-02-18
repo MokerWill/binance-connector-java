@@ -1,7 +1,7 @@
 package examples.websocketapi.general;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.impl.WebsocketApiClientImpl;
-import org.json.JSONObject;
 
 public final class Ping {
     private Ping() {
