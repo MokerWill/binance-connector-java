@@ -9,7 +9,7 @@ import com.binance.connector.client.utils.websocketapi.WebSocketApiRequestHandle
  * <h2>Market Requests</h2>
  * All requests under the
  * <a href="https://binance-docs.github.io/apidocs/websocket_api/en/#market-data-requests">Market requests</a>
- * section of the Websocket API documentation will be implemented in this class.
+ * section of the WebSocket API documentation will be implemented in this class.
  * <br>
  * Response will be returned as callback.
  */

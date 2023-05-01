@@ -1,8 +1,7 @@
 package examples.websocketapi.market;
 
-
 import com.alibaba.fastjson2.JSONObject;
-import com.binance.connector.client.impl.WebsocketApiClientImpl;
+import com.binance.connector.client.impl.WebSocketApiClientImpl;
 
 public final class TickerBook {
 
@@ -12,7 +11,7 @@ public final class TickerBook {
     private static final int waitTime = 3000;
 
     public static void main(String[] args) throws InterruptedException {
-        WebsocketApiClientImpl client = new WebsocketApiClientImpl();
+        WebSocketApiClientImpl client = new WebSocketApiClientImpl();
         client.connect(((event) -> {
             System.out.println(event);
         }));

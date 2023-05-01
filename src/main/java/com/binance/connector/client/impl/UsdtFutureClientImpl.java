@@ -3,8 +3,8 @@ package com.binance.connector.client.impl;
 import com.binance.connector.client.UsdtFutureClient;
 import com.binance.connector.client.enums.DefaultUrls;
 import com.binance.connector.client.impl.future.usdt.Market;
-import com.binance.connector.client.utils.HmacSignatureGenerator;
-import com.binance.connector.client.utils.SignatureGenerator;
+import com.binance.connector.client.utils.signaturegenerator.HmacSignatureGenerator;
+import com.binance.connector.client.utils.signaturegenerator.SignatureGenerator;
 
 
 public class UsdtFutureClientImpl implements UsdtFutureClient {
