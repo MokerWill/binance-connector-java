@@ -1,7 +1,6 @@
 package examples.websocketapi;
 
-import org.json.JSONObject;
-
+import com.alibaba.fastjson2.JSONObject;
 import com.binance.connector.client.WebSocketApiClient;
 import com.binance.connector.client.impl.WebSocketApiClientImpl;
 import com.binance.connector.client.utils.websocketcallback.WebSocketClosedCallback;
