@@ -58,7 +58,7 @@ public class WebSocketApiRequestHandler {
             case SIGNED:
                 ParameterChecker.checkParameterType(this.apiKey, String.class, "apiKey");
                 parameters = JSONParser.addKeyValue(parameters, "apiKey", this.apiKey);
-                if (!parameters.has("timestamp")) {
+                if (!parameters.containsKey("timestamp")) {
                     parameters.put("timestamp", UrlBuilder.buildTimestamp());
                 }
 
